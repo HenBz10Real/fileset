@@ -19,12 +19,6 @@ echo
 EXPIRED="20240712"
 EX=$(date +'%Y%m%d')
 if [ "$EX" -ge "$EXPIRED" ]; then
-  echo
-  sleep 1
-  echo "Script telah expired, ${READ}buy script permanent "
-  sleep 0.3
-  echo
-else
   echo ""
   sleep 0.4
   sleep 0.1
@@ -114,5 +108,10 @@ else
   done
   echo "FSA@Henpeex berhasil terpasang :${READ} $DATE "
   sleep 1 
+else
+  echo
+  sleep 1
+  echo "Script telah expired, ${READ}buy script permanent "
+  sleep 0.3
   echo
 fi
