@@ -1,3 +1,4 @@
+source $FUNCTION
 printer() {
 text="$1"
   color="$2"
