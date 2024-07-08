@@ -19,11 +19,13 @@ echo
 EXPIRED="20240711"
 EX=$(date +'%Y%m%d')
 if [ "$EX" -ge "$EXPIRED" ]; then
+  local link="https://linktr.ee/henvxofficial"
   echo
   sleep 1
   echo "Script telah expired, ${READ}buy script permanent "
   sleep 0.3
   echo
+  am start -a android.intent.action.VIEW -d ${link} > /dev/null 2>&1
 else
   echo ""
   sleep 0.4
