@@ -31,6 +31,7 @@ else
   echo "
 █▀▀ █▀ ▄▀█ ▄▄ █░█ █▀▀ █▄░█ █▀█ █▀▀ █▀▀ ▀▄▀
 █▀░ ▄█ █▀█ ░░ █▀█ ██▄ █░▀█ █▀▀ ██▄ ██▄ █░█"
+  echo
   sleep 0.4
   printer "- Developer : Henpee@FSA "
   sleep 0.2
