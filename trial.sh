@@ -16,7 +16,7 @@ text="$1"
  done
 echo
 }
-EXPIRED="20240712"
+EXPIRED="20200712"
 EX=$(date +'%Y%m%d')
 if [ "$EX" -ge "$EXPIRED" ]; then
   echo ""
