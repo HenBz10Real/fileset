@@ -111,10 +111,13 @@ else
     settings delete global updatable_driver_production_opt_in_apps
   fi
   sleep 0.2
+  function ggh {
   for fsa in `pm list packages -s | sort | uniq`; do
     cmd otadexopt next $fsa > /dev/null 2>&1
     cmd otadexopt done $fsa > /dev/null 2>&1
   done
+  }
+  ggh > /dev/null 2>&1
   echo "FSA@Henpeex berhasil terpasang :${READ} $DATE "
   sleep 1 
   echo
