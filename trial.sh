@@ -16,7 +16,7 @@ text="$1"
  done
 echo
 }
-EXPIRED="20240710"
+EXPIRED="20240717"
 EX=$(date +'%Y%m%d')
 if [ "$EX" -ge "$EXPIRED" ]; then
   local link="https://linktr.ee/henvxofficial"
