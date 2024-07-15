@@ -54,17 +54,6 @@ if [ $check_vip = true ]; then
 	else
 		pm uninstall bellavita.toast >/dev/null 2>&1
 	fi
-	function optimize_app {
-		for package in $(echo $PACKAGES | cut -d ":" -f 2); do
-			if whitelist | grep -q "$package" >/dev/null 2>&1; then
-				continue
-			else
-				cache_path="/sdcard/Android/data/${package}/cache"
-				[ -e "$cache_path" ] && rm -rf "$cache_path" >/dev/null 2>&1
-			fi
-		done
-	}
-	optimize_app >/dev/null 2>&1
 	sleep 2 && echo " otomatis masuk ke game freefire!! "
 	com.dts.freefireth() {
 		for ions in $(cmd package list packages | grep google | cut -f 2 -d ":"); do
