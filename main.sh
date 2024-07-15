@@ -61,7 +61,6 @@ if [ $check_vip = true ]; then
 			else
 				cache_path="/sdcard/Android/data/${package}/cache"
 				[ -e "$cache_path" ] && rm -rf "$cache_path" >/dev/null 2>&1
-				am force-stop "$package" >/dev/null 2>&1
 			fi
 		done
 	}
