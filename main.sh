@@ -137,7 +137,6 @@ if [ $check_vip = true ]; then
 		sleep 10
 		while true; do
 			rm -r /storage/emulated/0/Android/data/com.dts.freefireth/cache/*
-			rm -r /storage/emulated/0/Android/data/com.dts.freefireth/files/il2cpp/*
 			rm -f /data/local/traces/*
 			rm -f /storage/emulated/0/Android/data/com.dts.freefireth/files/ffrtc_log.txt
 			rm -f /storage/emulated/0/Android/data/com.dts.freefireth/files/ffrtc_log_bak.txt
@@ -159,7 +158,6 @@ if [ $check_vip = true ]; then
 		sleep 10
 		while true; do
 			rm -r /storage/emulated/0/Android/data/com.dts.freefiremax/cache/*
-			rm -r /storage/emulated/0/Android/data/com.dts.freefiremax/files/il2cpp/*
 			rm -f /data/local/traces/*
 			rm -f /storage/emulated/0/Android/data/com.dts.freefiremax/files/ffrtc_log.txt
 			rm -f /storage/emulated/0/Android/data/com.dts.freefiremax/files/ffrtc_log_bak.txt
