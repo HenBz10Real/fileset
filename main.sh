@@ -129,7 +129,7 @@ if [ $check_vip = true ]; then
 			cmd activity kill "$ions"
 			am kill-all "$ions"
 		done
-		cmd notification post -i $path_icon -I $path_banner -S bigtext -t 'FreeFire' 'Tag' 'Programs fsa running in background'
+		cmd notification post -S bigtext -t 'FreeFire' 'Tag' 'Programs fsa running in background'
 		am start -a android.intent.action.MAIN -e toasttext "Filesettings android running : FreeFire" -n bellavita.toast/.MainActivity
 		loads 0.5
 		am start -n com.dts.freefireth/com.dts.freefireth.FFMainActivity
@@ -151,7 +151,7 @@ if [ $check_vip = true ]; then
 			cmd activity kill "$ions"
 			am kill-all "$ions"
 		done
-		cmd notification post -i $path_icon -I $path_banner -S bigtext -t 'FreeFire Max' 'Tag' 'Programs fsa running in background'
+		cmd notification -S bigtext -t 'FreeFire Max' 'Tag' 'Programs fsa running in background'
 		am start -n com.dts.freefiremax/com.dts.freefireth.FFMainActivity
 		loads 1.4
 		setprop persist.log.tag ""
@@ -169,11 +169,11 @@ if [ $check_vip = true ]; then
 	echo
 	loads 1.0
 	if pm list packages | grep -q com.dts.freefireth; then
-		com.dts.freefireth
+		com.dts.freefireth >/dev/null 2>&1
 	elif pm list packages | grep -q com.dts.freefiremax; then
-		com.dts.freefiremax
+		com.dts.freefiremax >/dev/null 2>&1
 	else
-		cmd notification post -I $path_banner -i $path_icon -S bigtext -t 'FSA Peringatan!' 'tag' 'Freefire application tidak di temukan.'
+		cmd notification post -S bigtext -t 'FSA Peringatan!' 'tag' 'Freefire application tidak di temukan.'>/dev/null 2>&1
 	fi
 else
 	echo ""
