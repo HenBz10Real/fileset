@@ -36,5 +36,7 @@ sleep 0.3
     settings delete global updatable_driver_production_opt_in_apps
     cmd game downscale 1.0 com.dts.freefiremax
     cmd game downscale 1.0 com.dts.freefireth
+    pkill -f main_80.sh
+    pkill -f main.sh
  }
  remove > /dev/null 2>&1
