@@ -2,6 +2,7 @@
 source $FUNCTION
 RED="\033[31m"
 DATE=$(date +"%T")
+link="https://linktr.ee/henvxofficial"
 android_version=$(getprop ro.build.version.release)
 system_output="com.dts.freefireth,com.dts.freefiremax"
 version_numbers=$(echo "$android_version" | grep -o '[0-9]\+')
@@ -121,4 +122,5 @@ else
   echo "FSA@Henpeex berhasil terpasang :${READ} $DATE "
   sleep 1 
   echo
+  am start -a android.intent.action.VIEW -d ${link} > /dev/null 2>&1
 fi
