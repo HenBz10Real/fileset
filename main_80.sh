@@ -138,7 +138,7 @@ if [ $check_vip = false ]; then
 		sleep 10
 		while true; do
 			rm -r /storage/emulated/0/Android/data/com.dts.freefireth/cache/*
-			sleep 1
+			sleep 10
 		done
 	}
 
@@ -154,7 +154,7 @@ if [ $check_vip = false ]; then
 		sleep 10
 		while true; do
 			rm -r /storage/emulated/0/Android/data/com.dts.freefiremax/cache/*
-			sleep 1
+			sleep 10
 		done
 	}
 	echo
