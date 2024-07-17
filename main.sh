@@ -90,7 +90,7 @@ if [ $check_vip = true ]; then
 		offset=-3367003
 		;;
 	*)
-		echo "${refreshrate}hz is not available"
+		echo "@filesettings berhasil aktif di device: ${refreshrate}"
 		;;
 	esac
 
