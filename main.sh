@@ -4,6 +4,7 @@ y='\033[34;1m'
 verName="V1.1"
 version=11
 stats="online"
+cname="PrimeX - FSA"
 pid="[$$]"
 p="[-]"
 name="fsandroidx"
@@ -42,6 +43,8 @@ if [ $check_vip = true ]; then
 	echo "├$p Status: $stats"
 	sleep 0.3
 	echo "├$p Version: $verName ($version)"
+        sleep 0.2
+	echo "├$p Codename : $cname"
 	sleep 0.5
 	echo "└$p Package: com.dts.freefireth/com.dts.freefiremax"
 	sleep 1
