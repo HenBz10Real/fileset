@@ -28,7 +28,7 @@ printer() {
 	done
 	echo
 }
-local check_id=$(storm "link github")
+local check_id=$(storm "r17rYI0tYD6Cp9fQN5zvaVntdMysT5erOIfuNZlrN8mQdcjQOEcuT84DW9gQT50vYH=")
 local check_vip=$(echo "$check_id" | grep -q "$AXERONID" && echo true || echo false)
 if [ $check_vip = true ]; then
 	loads 0.1
