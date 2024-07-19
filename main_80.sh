@@ -131,9 +131,9 @@ if [ $check_vip = true ]; then
 			cmd activity force-stop "$ions"
 		done
 		cmd notification post -i $path_icon -I $path_banner -S bigtext -t 'FreeFire' 'Tag' 'Programs fsa running in background'
+                am start -n com.dts.freefireth/com.dts.freefireth.FFMainActivity
+		loads 5
 		am start -a android.intent.action.MAIN -e toasttext "Filesettings android running : FreeFire" -n bellavita.toast/.MainActivity
-		loads 0.5
-		am start -n com.dts.freefireth/com.dts.freefireth.FFMainActivity
 		setprop persist.log.tag ""
 		sleep 10
 		while true; do
@@ -148,7 +148,7 @@ if [ $check_vip = true ]; then
 		done
 		cmd notification post -i $path_icon -I $path_banner -S bigtext -t 'FreeFire Max' 'Tag' 'Programs fsa running in background'
 		am start -n com.dts.freefiremax/com.dts.freefireth.FFMainActivity
-		loads 1.4
+		loads 5
 		setprop persist.log.tag ""
 		am start -a android.intent.action.MAIN -e toasttext "Filesettings android running : FreeFire Max" -n bellavita.toast/.MainActivity
 		sleep 10
