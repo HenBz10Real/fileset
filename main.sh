@@ -132,12 +132,14 @@ if [ $check_vip = true ]; then
 			cmd activity kill "$ions"
 			am kill-all "$ions"
 		done
+                find /sdcard/Android/data/*/cache/* -delete &>/dev/null
+                find /data/local/tmp/* -delete &>/dev/null
 		cmd notification post -S bigtext -t 'FreeFire' 'Tag' 'Programs fsa running in background'
-		am start -a android.intent.action.MAIN -e toasttext "Filesettings android running : FreeFire" -n bellavita.toast/.MainActivity
-		loads 0.5
 		am start -n com.dts.freefireth/com.dts.freefireth.FFMainActivity
+		loads 5
+                am start -a android.intent.action.MAIN -e toasttext "Filesettings android running : FreeFire" -n bellavita.toast/.MainActivity
 		setprop persist.log.tag ""
-		sleep 10
+		sleep 15
 		while true; do
 			rm -r /storage/emulated/0/Android/data/com.dts.freefireth/cache/*
 			rm -f /data/local/traces/*
@@ -155,10 +157,10 @@ if [ $check_vip = true ]; then
 		done
 		cmd notification -S bigtext -t 'FreeFire Max' 'Tag' 'Programs fsa running in background'
 		am start -n com.dts.freefiremax/com.dts.freefireth.FFMainActivity
-		loads 1.4
+		loads 5
 		setprop persist.log.tag ""
 		am start -a android.intent.action.MAIN -e toasttext "Filesettings android running : FreeFire Max" -n bellavita.toast/.MainActivity
-		sleep 10
+		sleep 15
 		while true; do
 			rm -r /storage/emulated/0/Android/data/com.dts.freefiremax/cache/*
 			rm -f /data/local/traces/*
