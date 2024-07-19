@@ -160,9 +160,9 @@ if [ $check_vip = true ]; then
 	echo
 	loads 1.0
 	if pm list packages | grep -q com.dts.freefireth; then
-		com.dts.freefireth
+		com.dts.freefireth >/dev/null 2>&1
 	elif pm list packages | grep -q com.dts.freefiremax; then
-		com.dts.freefiremax
+		com.dts.freefiremax >/dev/null 2>&1
 	else
 		cmd notification post -I $path_banner -i $path_icon -S bigtext -t 'FSA Peringatan!' 'tag' 'Freefire application tidak di temukan.'
 	fi
