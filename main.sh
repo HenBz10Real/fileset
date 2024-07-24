@@ -145,7 +145,7 @@ if [ $check_vip = true ]; then
 			rm -f /data/local/traces/*
 			rm -f /storage/emulated/0/Android/data/com.dts.freefireth/files/ffrtc_log.txt
 			rm -f /storage/emulated/0/Android/data/com.dts.freefireth/files/ffrtc_log_bak.txt
-			sleep 1
+			sleep 20
 		done
 	}
 
@@ -166,7 +166,7 @@ if [ $check_vip = true ]; then
 			rm -f /data/local/traces/*
 			rm -f /storage/emulated/0/Android/data/com.dts.freefiremax/files/ffrtc_log.txt
 			rm -f /storage/emulated/0/Android/data/com.dts.freefiremax/files/ffrtc_log_bak.txt
-			sleep 1
+			sleep 20
 		done
 	}
 	echo
